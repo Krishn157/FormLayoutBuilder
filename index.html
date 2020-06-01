@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Form Layout Builder</h1>
+      <p>Just Drag n Drop !</p>
+    </div>
+    <br />
+    <br />
+    <div class="draggable-elements">
+      <h2>Choose the given form fields</h2>
+      <div draggable="true" class="draggable" id="text-input">
+        Text Input
+        <input
+          type="text"
+          name="text-input"
+          id="text-input"
+          placeholder="enter text"
+          disabled
+        />
+      </div>
+      <br />
+      <br />
+      <div draggable="true" class="draggable" id="radio-input">
+        Radio Button
+        <input type="radio" name="radio-input" id="radio-input" disabled />
+      </div>
+      <br />
+      <br />
+      <div draggable="true" class="draggable" id="check-input">
+        CheckBox
+        <input type="checkbox" name="check-input" id="check-input" disabled />
+      </div>
+      <br />
+      <br />
+      <div draggable="true" class="draggable" id="file-input">
+        File Input
+        <input type="file" name="file-input" id="file-input" disabled />
+      </div>
+      <br />
+      <br />
+      <div draggable="true" class="draggable" id="submit-input">
+        Submit Button
+        <input type="submit" name="submit-input" id="submit-input" disabled />
+      </div>
+      <br />
+      <br />
+
+      <button class="button button3" onclick="insertBreak()">
+        Insert LineBreak
+      </button>
+
+      <div id="snackbar">Line Break Inserted !</div>
+      <br />
+      <br />
+      <hr />
+      <button class="button button1" onclick="onSubmit()">Submit</button>
+      <button class="button button2" onclick="clearFields()">Clear</button>
+    </div>
+    <div class="dropped">
+      <h2>Generate Form Here</h2>
+    </div>
+  </body>
+</html>
