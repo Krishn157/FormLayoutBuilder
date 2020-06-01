@@ -37,15 +37,16 @@ function drop(event) {
       rc++;
       var x = document.createElement("input");
       x.setAttribute("type", "radio");
-      form.appendChild(document.createTextNode("RadioButton:" + rc));
+      form.appendChild(document.createTextNode("RadioButton" + rc + " "));
       x.setAttribute("id", id);
       break;
     case "check-input":
       cc++;
-      form.appendChild(document.createTextNode("CheckBox:" + cc));
+      form.appendChild(document.createTextNode("CheckBox" + cc + " "));
       var x = document.createElement("input");
       x.setAttribute("type", "checkbox");
       x.setAttribute("id", id);
+
       break;
     case "file-input":
       var x = document.createElement("input");
@@ -74,6 +75,14 @@ function clearFields() {
 
 function onSubmit() {
   console.log(form.outerHTML);
+  var fileName = prompt("Enter the file name ?", "GenerateForm");
+  var ht = "<html><body><h1>Form Generated</h1></br></br>";
+  ht += form.outerHTML;
+  ht += "</body></html>";
+  console.log(ht);
+  fileName += Date.now();
+  var blob = new Blob([ht], { type: "text/html;charset=utf-8" });
+  saveAs(blob, fileName);
 }
 
 function insertBreak() {

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    /> -->
     <link rel="stylesheet" type="text/css" href="index.css" />
     <script src="index.js" defer></script>
   </head>
@@ -13,7 +17,7 @@
       <p>Just Drag n Drop !</p>
     </div>
     <br />
-    <br />
+
     <div class="draggable-elements">
       <h2>Choose the given form fields</h2>
       <div draggable="true" class="draggable" id="text-input">
@@ -64,8 +68,9 @@
       <button class="button button1" onclick="onSubmit()">Submit</button>
       <button class="button button2" onclick="clearFields()">Clear</button>
     </div>
-    <div class="dropped">
+    <div class="dropped form-group">
       <h2>Generate Form Here</h2>
     </div>
+    <script src="filesaver.js"></script>
   </body>
 </html>
